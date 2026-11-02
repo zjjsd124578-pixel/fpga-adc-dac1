@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+  <class>AdcWidget</class>
+  <widget class="QWidget" name="AdcWidget">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1149</width>
+        <height>722</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Form</string>
+    </property>
+    <layout class="QVBoxLayout" name="adcPageLayout">
+      <property name="spacing">
+        <number>16</number>
+      </property>
+      <property name="leftMargin">
+        <number>20</number>
+      </property>
+      <property name="topMargin">
+        <number>20</number>
+      </property>
+      <property name="rightMargin">
+        <number>20</number>
+      </property>
+      <property name="bottomMargin">
+        <number>20</number>
+      </property>
+      <item>
+        <layout class="QHBoxLayout" name="adcHeaderLayout">
+          <item>
+            <widget class="QPushButton" name="btn_back">
+              <property name="geometry">
+                <rect>
+                  <x>10</x>
+                  <y>10</y>
+                  <width>93</width>
+                  <height>28</height>
+                </rect>
+              </property>
+              <property name="text">
+                <string>返回</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLabel" name="label_adcTitle">
+              <property name="text">
+                <string>ADC 信号采集</string>
+              </property>
+              <property name="heading" stdset="0">
+                <bool>true</bool>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <spacer name="adcHeaderSpacer">
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="adcBodyLayout" stretch="0,1">
+          <property name="spacing">
+            <number>20</number>
+          </property>
+          <item>
+            <widget class="QScrollArea" name="scrollArea_adcControls">
+              <property name="widgetResizable">
+                <bool>true</bool>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>380</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>380</width>
+                  <height>16777215</height>
+                </size>
+              </property>
+              <widget class="QWidget" name="adcSidebar">
+                <layout class="QVBoxLayout" name="adcControlsLayout">
+                  <property name="spacing">
+                    <number>14</number>
+                  </property>
+                  <item>
+                    <widget class="QGroupBox" name="groupBox_3">
+                      <property name="title">
+                        <string>设备连接</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_2">
+                        <item row="0" column="0">
+                          <layout class="QHBoxLayout" name="horizontalLayout_5">
+                            <item>
+                              <layout class="QVBoxLayout" name="verticalLayout_3">
+                                <item>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                                    <item>
+                                      <widget class="QLabel" name="label">
+                                        <property name="text">
+                                          <string>IP地址</string>
+                                        </property>
+                                      </widget>
+                                    </item>
+                                    <item>
+                                      <widget class="QLineEdit" name="lineEdit_ip">
+                                        <property name="text">
+                                          <string>192.168.1.10</string>
+                                        </property>
+                                      </widget>
+                                    </item>
+                                    <item>
+                                      <spacer name="horizontalSpacer_4">
+                                        <property name="orientation">
+                                          <enum>Qt::Horizontal</enum>
+                                        </property>
+                                        <property name="sizeHint" stdset="0">
+                                          <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                          </size>
+                                        </property>
+                                      </spacer>
+                                    </item>
+                                  </layout>
+                                </item>
+                                <item>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                                    <item>
+                                      <widget class="QLabel" name="label_3">
+                                        <property name="text">
+                                          <string>端口号</string>
+                                        </property>
+                                      </widget>
+                                    </item>
+                                    <item>
+                                      <widget class="QSpinBox" name="spinBox_port">
+                                        <property name="maximum">
+                                          <number>65535</number>
+                                        </property>
+                                        <property name="value">
+                                          <number>6001</number>
+                                        </property>
+                                      </widget>
+                                    </item>
+                                    <item>
+                                      <spacer name="horizontalSpacer">
+                                        <property name="orientation">
+                                          <enum>Qt::Horizontal</enum>
+                                        </property>
+                                        <property name="sizeHint" stdset="0">
+                                          <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                          </size>
+                                        </property>
+                                      </spacer>
+                                    </item>
+                                  </layout>
+                                </item>
+                                <item>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                                    <item>
+                                      <widget class="QLabel" name="label_2">
+                                        <property name="text">
+                                          <string>传输模式</string>
+                                        </property>
+                                      </widget>
+                                    </item>
+                                    <item>
+                                      <widget class="QComboBox" name="comboBox_mode">
+                                        <item>
+                                          <property name="text">
+                                            <string>TCP(1000M)</string>
+                                          </property>
+                                        </item>
+                                        <item>
+                                          <property name="text">
+                                            <string>UDP（100M）</string>
+                                          </property>
+                                        </item>
+                                      </widget>
+                                    </item>
+                                    <item>
+                                      <spacer name="horizontalSpacer_2">
+                                        <property name="orientation">
+                                          <enum>Qt::Horizontal</enum>
+                                        </property>
+                                        <property name="sizeHint" stdset="0">
+                                          <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                          </size>
+                                        </property>
+                                      </spacer>
+                                    </item>
+                                  </layout>
+                                </item>
+                              </layout>
+                            </item>
+                            <item>
+                              <spacer name="horizontalSpacer_3">
+                                <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                  <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                  </size>
+                                </property>
+                              </spacer>
+                            </item>
+                            <item>
+                              <widget class="QPushButton" name="btn_connect">
+                                <property name="text">
+                                  <string>连接</string>
+                                </property>
+                              </widget>
+                            </item>
+                          </layout>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QGroupBox" name="groupBox_2">
+                      <property name="title">
+                        <string>采集控制</string>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_4">
+                        <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_6">
+                            <item>
+                              <widget class="QPushButton" name="btn_arm">
+                                <property name="text">
+                                  <string>开始 / 重新布防</string>
+                                </property>
+                                <property name="toolTip">
+                                  <string>发送 ARM，请求重新布防并恢复预览；记录上传忙时可能不能立即生效。</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item>
+                              <spacer name="horizontalSpacer_5">
+                                <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                  <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                  </size>
+                                </property>
+                              </spacer>
+                            </item>
+                            <item>
+                              <widget class="QPushButton" name="btn_pauseDisplay">
+                                <property name="text">
+                                  <string>暂停波形</string>
+                                </property>
+                                <property name="toolTip">
+                                  <string>暂停后可放大、移动和测量当前波形；板子继续采集，继续后显示最新波形。</string>
+                                </property>
+                              </widget>
+                            </item>
+                          </layout>
+                        </item>
+                        <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_7">
+                            <item>
+                              <widget class="QPushButton" name="btn_trigger">
+                                <property name="toolTip">
+                                  <string>发送 TRIGGER，等待现有硬件阈值条件满足后冻结并上传；不是强制立即触发。</string>
+                                </property>
+                                <property name="text">
+                                  <string>等待阈值触发</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item>
+                              <spacer name="horizontalSpacer_6">
+                                <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                  <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                  </size>
+                                </property>
+                              </spacer>
+                            </item>
+                            <item>
+                              <widget class="QPushButton" name="btn_pause">
+                                <property name="text">
+                                  <string>结束并读记录</string>
+                                </property>
+                                <property name="toolTip">
+                                  <string>结束本轮采集，等待板子采完后续数据并上传完整记录；接收后在原图显示。</string>
+                                </property>
+                              </widget>
+                            </item>
+                          </layout>
+                        </item>
+                        <item>
+                          <widget class="QPushButton" name="btn_moreOperations">
+                            <property name="text">
+                              <string>更多操作</string>
+                            </property>
+                            <property name="toolTip">
+                              <string>采集窗口设置、重读上次记录。</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="label_acquisitionHint">
+                            <property name="text">
+                              <string>暂停波形方便查看，板子继续采集；结束并读记录会结束本轮采集，并显示完整记录。</string>
+                            </property>
+                            <property name="wordWrap">
+                              <bool>true</bool>
+                            </property>
+                            <property name="muted" stdset="0">
+                              <bool>true</bool>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="label_acquisitionStatus">
+                            <property name="text">
+                              <string>采集状态：待板端上报。</string>
+                            </property>
+                            <property name="wordWrap">
+                              <bool>true</bool>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="label_recordStatus">
+                            <property name="text">
+                              <string>记录：尚未收到完整记录。</string>
+                            </property>
+                            <property name="wordWrap">
+                              <bool>true</bool>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QGroupBox" name="groupBox_4">
+                      <property name="title">
+                        <string>运行日志</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_3">
+                        <item row="0" column="0">
+                          <widget class="QPlainTextEdit" name="textEdit_rawData">
+                            <property name="readOnly">
+                              <bool>true</bool>
+                            </property>
+                            <property name="minimumHeight">
+                              <number>120</number>
+                            </property>
+                            <property name="maximumHeight">
+                              <number>190</number>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <spacer name="adcControlsSpacer">
+                      <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                      </property>
+                    </spacer>
+                  </item>
+                  <property name="leftMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                    <number>0</number>
+                  </property>
+                </layout>
+              </widget>
+            </widget>
+          </item>
+          <item>
+            <layout class="QVBoxLayout" name="adcWaveformLayout" stretch="1,0">
+              <property name="spacing">
+                <number>12</number>
+              </property>
+              <item>
+                <widget class="QWidget" name="widget_waveform_container" native="true"></widget>
+              </item>
+              <item>
+                <widget class="QGroupBox" name="groupBox_samplingParameters">
+                  <property name="title">
+                    <string>采样参数（AN9238）</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_samplingParameters">
+                    <property name="spacing">
+                      <number>8</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="label_sampleRate">
+                        <property name="text">
+                          <string>采样率</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="label_sampleRateValue">
+                        <property name="text">
+                          <string>未收到数据</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="label_channelCount">
+                        <property name="text">
+                          <string>通道</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="label_channelCountValue">
+                        <property name="text">
+                          <string>2 路</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="label_adcBits">
+                        <property name="text">
+                          <string>位宽</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="label_adcBitsValue">
+                        <property name="text">
+                          <string>12 bit</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="label_decimation">
+                        <property name="text">
+                          <string>抽取</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="label_decimationValue">
+                        <property name="text">
+                          <string>未收到数据</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <spacer name="horizontalSpacer_samplingParameters">
+                        <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                          <size>
+                            <width>0</width>
+                            <height>0</height>
+                          </size>
+                        </property>
+                      </spacer>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+            </layout>
+          </item>
+        </layout>
+      </item>
+    </layout>
+    <action name="action_windowSettings">
+      <property name="text"><string>采集窗口设置…</string></property>
+      <property name="toolTip"><string>设置采集时间范围；应用设置后开始新一轮采集。</string></property>
+    </action>
+    <action name="action_dump">
+      <property name="text"><string>重读上次记录</string></property>
+      <property name="toolTip"><string>再次读取板子保留的上次采集记录；只有板子仍保留该记录时才有效。</string></property>
+    </action>
+  </widget>
+  <resources />
+  <connections />
+</ui>

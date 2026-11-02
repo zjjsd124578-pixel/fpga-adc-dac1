@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+  <class>HomeWidget</class>
+  <widget class="QWidget" name="HomeWidget">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1033</width>
+        <height>673</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="homePageLayout" stretch="0,0,0,0,1,0,1">
+      <property name="spacing">
+        <number>10</number>
+      </property>
+      <property name="leftMargin">
+        <number>52</number>
+      </property>
+      <property name="topMargin">
+        <number>24</number>
+      </property>
+      <property name="rightMargin">
+        <number>52</number>
+      </property>
+      <property name="bottomMargin">
+        <number>24</number>
+      </property>
+      <item>
+        <widget class="QLabel" name="label_homeEyebrow">
+          <property name="text">
+            <string>FPGA · SIGNAL LAB</string>
+          </property>
+          <property name="eyebrow" stdset="0">
+            <bool>true</bool>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="label">
+          <property name="text">
+            <string>FPGA 信号采集与测试平台</string>
+          </property>
+          <property name="heading" stdset="0">
+            <bool>true</bool>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="label_homeSubtitle">
+          <property name="text">
+            <string>选择基础仪器或联合测试，开始实验。</string>
+          </property>
+          <property name="muted" stdset="0">
+            <bool>true</bool>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="label_basicSection">
+          <property name="text">
+            <string>基础仪器</string>
+          </property>
+          <property name="sectionTitle" stdset="0">
+            <bool>true</bool>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="homeCardsLayout" stretch="1,1">
+          <property name="spacing">
+            <number>36</number>
+          </property>
+          <item>
+            <widget class="QFrame" name="card_adc">
+              <property name="card" stdset="0">
+                <bool>true</bool>
+              </property>
+              <layout class="QVBoxLayout" name="adcCardLayout">
+                <property name="spacing">
+                  <number>6</number>
+                </property>
+                <property name="leftMargin">
+                  <number>18</number>
+                </property>
+                <property name="topMargin">
+                  <number>18</number>
+                </property>
+                <property name="rightMargin">
+                  <number>18</number>
+                </property>
+                <property name="bottomMargin">
+                  <number>18</number>
+                </property>
+                <item>
+                  <widget class="QLabel" name="adcTitle">
+                    <property name="text">
+                      <string>ADC 信号采集</string>
+                    </property>
+                    <property name="cardTitle" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel" name="adcDescription">
+                    <property name="text">
+                      <string>观察输入信号，完成波形测量与频谱分析。</string>
+                    </property>
+                    <property name="muted" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <layout class="QHBoxLayout" name="adcTags">
+                    <property name="spacing">
+                      <number>8</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="adcTag0">
+                        <property name="text">
+                          <string>双通道波形</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="adcTag1">
+                        <property name="text">
+                          <string>光标测量</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="adcTag2">
+                        <property name="text">
+                          <string>FFT / AI</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <spacer name="adcTagSpacer">
+                        <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                          <size>
+                            <width>0</width>
+                            <height>0</height>
+                          </size>
+                        </property>
+                      </spacer>
+                    </item>
+                  </layout>
+                </item>
+                <item>
+                  <spacer name="adcSpacer">
+                    <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                      <size>
+                        <width>0</width>
+                        <height>0</height>
+                      </size>
+                    </property>
+                  </spacer>
+                </item>
+                <item>
+                  <widget class="QPushButton" name="btn_adc">
+                    <property name="text">
+                      <string>进入采集</string>
+                    </property>
+                    <property name="primary" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+          </item>
+          <item>
+            <widget class="QFrame" name="card_dac">
+              <property name="card" stdset="0">
+                <bool>true</bool>
+              </property>
+              <layout class="QVBoxLayout" name="dacCardLayout">
+                <property name="spacing">
+                  <number>6</number>
+                </property>
+                <property name="leftMargin">
+                  <number>18</number>
+                </property>
+                <property name="topMargin">
+                  <number>18</number>
+                </property>
+                <property name="rightMargin">
+                  <number>18</number>
+                </property>
+                <property name="bottomMargin">
+                  <number>18</number>
+                </property>
+                <item>
+                  <widget class="QLabel" name="dacTitle">
+                    <property name="text">
+                      <string>DAC 信号发生</string>
+                    </property>
+                    <property name="cardTitle" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel" name="dacDescription">
+                    <property name="text">
+                      <string>配置信号参数，输出固定波形或扫频信号。</string>
+                    </property>
+                    <property name="muted" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <layout class="QHBoxLayout" name="dacTags">
+                    <property name="spacing">
+                      <number>8</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="dacTag0">
+                        <property name="text">
+                          <string>波形配置</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="dacTag1">
+                        <property name="text">
+                          <string>幅值 / 偏置</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="dacTag2">
+                        <property name="text">
+                          <string>扫频输出</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <spacer name="dacTagSpacer">
+                        <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                          <size>
+                            <width>0</width>
+                            <height>0</height>
+                          </size>
+                        </property>
+                      </spacer>
+                    </item>
+                  </layout>
+                </item>
+                <item>
+                  <spacer name="dacSpacer">
+                    <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                      <size>
+                        <width>0</width>
+                        <height>0</height>
+                      </size>
+                    </property>
+                  </spacer>
+                </item>
+                <item>
+                  <widget class="QPushButton" name="btn_dac">
+                    <property name="text">
+                      <string>进入输出</string>
+                    </property>
+                    <property name="primary" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="QLabel" name="label_testSection">
+          <property name="text">
+            <string>联合测试</string>
+          </property>
+          <property name="sectionTitle" stdset="0">
+            <bool>true</bool>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="homeTestCardsLayout" stretch="1,1">
+          <property name="spacing">
+            <number>36</number>
+          </property>
+          <item>
+            <widget class="QFrame" name="card_loop">
+              <property name="card" stdset="0">
+                <bool>true</bool>
+              </property>
+              <layout class="QVBoxLayout" name="loopCardLayout">
+                <property name="spacing">
+                  <number>6</number>
+                </property>
+                <property name="leftMargin">
+                  <number>18</number>
+                </property>
+                <property name="topMargin">
+                  <number>18</number>
+                </property>
+                <property name="rightMargin">
+                  <number>18</number>
+                </property>
+                <property name="bottomMargin">
+                  <number>18</number>
+                </property>
+                <item>
+                  <widget class="QLabel" name="loopTitle">
+                    <property name="text">
+                      <string>幅值闭环测试</string>
+                    </property>
+                    <property name="cardTitle" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel" name="loopDescription">
+                    <property name="text">
+                      <string>设定目标峰峰值，根据 ADC 反馈自动调节幅值。</string>
+                    </property>
+                    <property name="muted" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <layout class="QHBoxLayout" name="loopTags">
+                    <property name="spacing">
+                      <number>8</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="loopTag0">
+                        <property name="text">
+                          <string>目标 / 实测</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="loopTag1">
+                        <property name="text">
+                          <string>调幅状态</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="loopTag2">
+                        <property name="text">
+                          <string>ADC + DAC</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <spacer name="loopTagSpacer">
+                        <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                          <size>
+                            <width>0</width>
+                            <height>0</height>
+                          </size>
+                        </property>
+                      </spacer>
+                    </item>
+                  </layout>
+                </item>
+                <item>
+                  <spacer name="loopSpacer">
+                    <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                      <size>
+                        <width>0</width>
+                        <height>0</height>
+                      </size>
+                    </property>
+                  </spacer>
+                </item>
+                <item>
+                  <widget class="QPushButton" name="btn_amplitudeLoop">
+                    <property name="text">
+                      <string>进入闭环测试</string>
+                    </property>
+                    <property name="primary" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+          </item>
+          <item>
+            <widget class="QFrame" name="card_circuit">
+              <property name="card" stdset="0">
+                <bool>true</bool>
+              </property>
+              <layout class="QVBoxLayout" name="circuitCardLayout">
+                <property name="spacing">
+                  <number>6</number>
+                </property>
+                <property name="leftMargin">
+                  <number>18</number>
+                </property>
+                <property name="topMargin">
+                  <number>18</number>
+                </property>
+                <property name="rightMargin">
+                  <number>18</number>
+                </property>
+                <property name="bottomMargin">
+                  <number>18</number>
+                </property>
+                <item>
+                  <widget class="QLabel" name="circuitTitle">
+                    <property name="text">
+                      <string>待测电路测试</string>
+                    </property>
+                    <property name="cardTitle" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel" name="circuitDescription">
+                    <property name="text">
+                      <string>向待测电路施加激励，同时观察采集响应。</string>
+                    </property>
+                    <property name="muted" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <layout class="QHBoxLayout" name="circuitTags">
+                    <property name="spacing">
+                      <number>8</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="circuitTag0">
+                        <property name="text">
+                          <string>激励配置</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="circuitTag1">
+                        <property name="text">
+                          <string>响应测量</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="circuitTag2">
+                        <property name="text">
+                          <string>双窗观察</string>
+                        </property>
+                        <property name="capability" stdset="0">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <spacer name="circuitTagSpacer">
+                        <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                          <size>
+                            <width>0</width>
+                            <height>0</height>
+                          </size>
+                        </property>
+                      </spacer>
+                    </item>
+                  </layout>
+                </item>
+                <item>
+                  <spacer name="circuitSpacer">
+                    <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                      <size>
+                        <width>0</width>
+                        <height>0</height>
+                      </size>
+                    </property>
+                  </spacer>
+                </item>
+                <item>
+                  <widget class="QPushButton" name="btn_circuitTest">
+                    <property name="text">
+                      <string>进入电路测试</string>
+                    </property>
+                    <property name="primary" stdset="0">
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+  <resources />
+  <connections />
+</ui>
