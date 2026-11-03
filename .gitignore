@@ -1,0 +1,37 @@
+# Generated output: rebuild from the committed sources and configuration.
+/build/
+/.local/
+**/.Xil/
+**/xsim.dir/
+**/*.cache/
+**/*.runs/
+**/*.gen/
+**/*.sim/
+**/*.ip_user_files/
+**/.metadata/
+**/Debug/
+**/Release/
+__pycache__/
+*.py[cod]
+*.log
+*.jou
+*.pb
+*.wdb
+*.str
+*.dcp
+*.bit
+*.bin
+*.elf
+*.o
+*.a
+*.map
+*.zip
+*.stackdump
+.env
+.env.*
+!.env.example
+credentials.json
+secrets.json
+*.key
+*.pem
+# Preserve source ROMs and hardware definitions: .mem/.bd/.xdc are NOT ignored.
